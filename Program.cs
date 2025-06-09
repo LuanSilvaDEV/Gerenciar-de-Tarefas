@@ -8,9 +8,15 @@ class Program
 {
     //Cria uma lista do com dados tipo texto
     static List<string> tarefas = new List<string>();
+    //Cria o caminho onde será armazenado a lista;
+    static string caminhoArquivo = "tarefas.txt";
+
     //Cria o menu de Interação
+
     static void Main()
     {
+        //Chama a fução para ler as tarefas já salvas anteriormente antes de iniciar;
+        CarregarTarefas();
         //Cria uma variavel do tipo inteiro
         int opcao = 0;
 
@@ -26,7 +32,7 @@ class Program
             Console.Write("ESCOLHA UMA OPÇÃO: ");
 
             //Cria uma variavel do tipo String recebendo o valor inserido pelo usuario;
-            string entrada = Console.ReadLine()??"";
+            string entrada = Console.ReadLine() ?? "";
             if (!int.TryParse(entrada, out opcao))
             {
                 Console.WriteLine("Digite um número válido!");
@@ -64,9 +70,10 @@ class Program
         //Mostrar na tela para que o usuario insira a tarefa que deseja armazenar;
         Console.WriteLine("Digite a Tarefa: ");
         //Cria uma variavel do tipo STRING recebendo o valor inserido pelo usuario;
-        string tarefa = Console.ReadLine()??"";
+        string tarefa = Console.ReadLine() ?? "";
         //Coleta o dado inserido pelo usuario que está armazenado na variavel e adiciona a lista criada na linha 10
         tarefas.Add(tarefa);
+        SalvarTarefas();
         //Mostra ao usuario que a tarefa foi adicionada a lista com sucesso;
         Console.WriteLine("Tarefa Adicionada com Sucesso!");
     }
@@ -96,7 +103,7 @@ class Program
         //Exibe na tela a mesagem para que o usuario insira o numero da tarefa a ser removida;
         Console.WriteLine("Digite o número da tarefa a ser removida:");
         //Cria 2 novas variaveis, uma do tipo STRING recebendo como valor o input do usuario, e a outra do tipo inteiro;
-        string entrada = Console.ReadLine()??"";
+        string entrada = Console.ReadLine() ?? "";
         int indice;
 
         if (int.TryParse(entrada, out indice))
@@ -105,6 +112,7 @@ class Program
             if (indice >= 0 && indice < tarefas.Count)
             {
                 tarefas.RemoveAt(indice);
+                SalvarTarefas();
                 Console.WriteLine("Tarefa foi Removida!");
             }
             else
@@ -117,6 +125,34 @@ class Program
             Console.WriteLine("Número Inválido.");
         }
     }
+    //Está função faz a leitura do arquivo de texto onde é armazenado a lista e traz ao sistema os dados inseridos anteriormente;
+    static void CarregarTarefas()
+    {
+       try
+        {
+            if (File.Exists(caminhoArquivo))
+            {
+                tarefas = new List<string>(File.ReadAllLines(caminhoArquivo));
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Erro ao carregar tarefas: {e.Message}");
+        } 
+    }
+    //Esta função armazena todos as alterações recentes na lista, mantendo-a sempre atualizada;
+    static void SalvarTarefas()
+    {
+        try
+        {
+            File.WriteAllLines(caminhoArquivo, tarefas); // sobrescreve o arquivo
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Erro ao salvar tarefas: {e.Message}");
+        }
+    }
+
 }
 
 
