@@ -88,14 +88,34 @@ class Program
             }
         }
     }
-    static void RemoverTarefas() {
+    static void RemoverTarefas()
+    {
+        //Chama a função anterior que lista as tarefas;
+        ListarTarefas();
+        //Exibe na tela a mesagem para que o usuario insira o numero da tarefa a ser removida;
+        Console.WriteLine("Digite o número da tarefa a ser removida:");
+        //Cria 2 novas variaveis, uma do tipo STRING recebendo como valor o input do usuario, e a outra do tipo inteiro;
+        string entrada = Console.ReadLine();
+        int indice;
         
+        if (int.TryParse(entrada, out indice))
+        {
+            indice--;
+            if (indice >= 0 && indice < tarefas.Count)
+            {
+                tarefas.RemoveAt(indice);
+                Console.WriteLine("Tarefa foi Removida!");
+            }
+            else
+            {
+                Console.WriteLine("Número fora do intervalo.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Número Inválido.");
+        }
     }
-    
-
-
-    
-
 }
 
 
