@@ -1,0 +1,15 @@
+C:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\GerenciadorTarefas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\GerenciadorTarefas.AssemblyInfoInputs.cache
+C:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\GerenciadorTarefas.AssemblyInfo.cs
+C:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\GerenciadorTarefas.csproj.CoreCompileInputs.cache
+C:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\GerenciadorTarefas.sourcelink.json
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\bin\Debug\net9.0\GerenciadorTarefas.exe
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\bin\Debug\net9.0\GerenciadorTarefas.deps.json
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\bin\Debug\net9.0\GerenciadorTarefas.runtimeconfig.json
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\bin\Debug\net9.0\GerenciadorTarefas.dll
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\bin\Debug\net9.0\GerenciadorTarefas.pdb
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\GerenciadorTarefas.dll
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\refint\GerenciadorTarefas.dll
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\GerenciadorTarefas.pdb
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\GerenciadorTarefas.genruntimeconfig.cache
+c:\Users\Luan Silva\Desktop\Sistema de Gestão Pessoal - ProJ\GerenciadorTarefas\obj\Debug\net9.0\ref\GerenciadorTarefas.dll

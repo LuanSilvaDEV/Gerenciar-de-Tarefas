@@ -9,7 +9,7 @@ class Program
     //Cria uma lista do com dados tipo texto
     static List<string> tarefas = new List<string>();
     //Cria o menu de Interação
-    static void main()
+    static void Main()
     {
         //Cria uma variavel do tipo inteiro
         int opcao = 0;
@@ -20,12 +20,13 @@ class Program
             //Exibe mensagens na tela do usuario
             Console.WriteLine("\n=== GERENCIADOR DE TAREFAS ===");
             Console.WriteLine("1- ADD TAREFA");
-            Console.WriteLine("1- LISTAR TAREFAS");
-            Console.WriteLine("1- REMOVER TAREFAS");
+            Console.WriteLine("2- LISTAR TAREFAS");
+            Console.WriteLine("3- REMOVER TAREFAS");
+            Console.WriteLine("0- SAIR");
             Console.Write("ESCOLHA UMA OPÇÃO: ");
 
             //Cria uma variavel do tipo String recebendo o valor inserido pelo usuario;
-            string entrada = Console.ReadLine();
+            string entrada = Console.ReadLine()??"";
             if (!int.TryParse(entrada, out opcao))
             {
                 Console.WriteLine("Digite um número válido!");
@@ -63,7 +64,7 @@ class Program
         //Mostrar na tela para que o usuario insira a tarefa que deseja armazenar;
         Console.WriteLine("Digite a Tarefa: ");
         //Cria uma variavel do tipo STRING recebendo o valor inserido pelo usuario;
-        string tarefa = Console.ReadLine();
+        string tarefa = Console.ReadLine()??"";
         //Coleta o dado inserido pelo usuario que está armazenado na variavel e adiciona a lista criada na linha 10
         tarefas.Add(tarefa);
         //Mostra ao usuario que a tarefa foi adicionada a lista com sucesso;
@@ -95,9 +96,9 @@ class Program
         //Exibe na tela a mesagem para que o usuario insira o numero da tarefa a ser removida;
         Console.WriteLine("Digite o número da tarefa a ser removida:");
         //Cria 2 novas variaveis, uma do tipo STRING recebendo como valor o input do usuario, e a outra do tipo inteiro;
-        string entrada = Console.ReadLine();
+        string entrada = Console.ReadLine()??"";
         int indice;
-        
+
         if (int.TryParse(entrada, out indice))
         {
             indice--;
